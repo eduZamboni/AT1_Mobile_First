@@ -1,0 +1,98 @@
+/* Estilos Gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Item Viewer */
+.item-viewer {
+  text-align: center;
+}
+
+.item-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.item-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.view-similar-button {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Similar Users */
+.similar-users {
+  margin-top: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-affinity {
+  color: #555;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .item-actions button {
+    width: 150px;
+  }
+}
+
+/* Esquema de Cores Light e Dark */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  .back-button {
+    color: #ffffff;
+  }
+
+  .user-card {
+    border: 1px solid #333;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .back-button {
+    color: #007bff;
+  }
+
+  .user-card {
+    border: 1px solid #ccc;
+  }
+}

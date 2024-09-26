@@ -1,0 +1,80 @@
+/* Grid Container */
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "mainContent"
+      "footer";
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Àrea no grid */
+  .header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .globalMenu {
+    grid-area: globalMenu;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .contextMenu {
+    grid-area: contextMenu;
+    background-color: #555;
+    color: white;
+    padding: 20px;
+  }
+  
+  .mainContent {
+    grid-area: mainContent;
+    background-color: #666;
+    color: white;
+    padding: 20px;
+  }
+  
+  .ads {
+    grid-area: ads;
+    background-color: #777;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Estilos */
+.gridContainer {
+    grid-template-areas:
+    "header header header"
+    "globalMenu globalMenu ads"
+    "contextMenu mainContent ads"
+    "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.header, .footer {
+    grid-column: span 3;
+}
+
+/* Global Menu */
+.globalMenu {
+    grid-column: span 2;
+}
+
+.mainContent, .contextMenu, .ads {
+    min-height: 300px;
+}

@@ -1,0 +1,147 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Menu */
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f5f6f7;
+    overflow-x: auto;
+  }
+  
+  .menu li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #3b5998;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Layout principal */
+  .main-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feed {
+    flex: 3;
+    padding: 10px;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .friends-list, .suggestions-list {
+    margin-bottom: 20px;
+  }
+  
+  /* Postagens */
+  .post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .post-title {
+    margin: 10px 0;
+  }
+  
+  .post-text {
+    margin: 10px 0;
+  }
+  
+  .post-info {
+    color: #555;
+    font-size: 12px;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .post-comments {
+    margin-top: 10px;
+  }
+  
+  .comment {
+    border-top: 1px solid #ddd;
+    padding: 5px 0;
+  }
+  
+  /* Amigos e Sugestões */
+  .friend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .friend-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .friend-info {
+    margin-left: 10px;
+  }
+  
+  .friend-name {
+    font-weight: bold;
+  }
+  
+  .friend-details {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  /* Responsividade */
+  @media (min-width: 768px) {
+    .main-grid {
+      flex-direction: row;
+    }
+  
+    .feed {
+      flex: 3;
+    }
+  
+    .sidebar {
+      flex: 1;
+    }
+  }

@@ -1,0 +1,52 @@
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Controles para adicionar e remover imagens */
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .controls span {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  /* Galeria de imagens */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    max-width: 100%; 
+  }
+  
+  /* Estilo das caixas de imagem */
+  .imageBox {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+  }

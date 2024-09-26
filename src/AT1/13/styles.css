@@ -1,0 +1,131 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Categorias */
+  .category-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    margin-bottom: 10px;
+  }
+  
+  .category-list button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Lista de Tarefas */
+  .todo-list input[type='text'] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .todo-list button {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  /* Lista */
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .task-item span {
+    flex: 1;
+  }
+  
+  .task-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .task-item button {
+    margin-left: 5px;
+  }
+  
+  /* Responsividade */
+  @media (min-width: 768px) {
+    .todo-list input[type='text'] {
+      width: calc(100% - 120px);
+    }
+  
+    .todo-list button {
+      width: 100px;
+    }
+  }
+  
+  /* Esquema de Cores Light e Dark */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  
+    .category-list button,
+    .todo-list button {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #333;
+    }
+  
+    .back-button {
+      color: #ffffff;
+    }
+  
+    .task-item.completed span {
+      color: #bbb;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  
+    .category-list button,
+    .todo-list button {
+      background-color: #f1f1f1;
+      color: #000000;
+      border: 1px solid #ccc;
+    }
+  
+    .back-button {
+      color: #007bff;
+    }
+  
+    .task-item.completed span {
+      color: #888;
+    }
+  }

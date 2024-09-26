@@ -1,0 +1,80 @@
+/* Container do menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #858181;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+/* Logo à esquerda */
+.menu-logo .logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Itens do menu, inicialmente escondidos em dispositivos móveis */
+.menu-items {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #858181;
+}
+
+.menu-items li {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.menu-items li:hover {
+  background-color: #444;
+}
+
+/* Ícone do menu (hambúrguer) à direita */
+.menu-toggle {
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+/* Menu aberto em dispositivos móveis */
+.menu-open {
+  display: flex;
+}
+
+/* Estilos para telas maiores (desktop) */
+@media (min-width: 768px) {
+  .menu {
+    justify-content: space-between;
+  }
+
+  /* Ícones desaparecem em telas maiores */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Itens de menu dispostos em linha e visíveis */
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+  }
+
+  .menu-items li {
+    padding: 0 20px;
+    border: none;
+  }
+}

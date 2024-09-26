@@ -1,0 +1,68 @@
+/* Container do menu */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #858181;
+  height: 100vh;
+  padding: 10px;
+  color: white;
+}
+
+/* Header do menu (Logo e Ícone) */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Itens do menu, inicialmente escondidos */
+.menu-items {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  flex-grow: 1; 
+  flex-direction: column;
+}
+
+.menu-items li {
+  padding: 15px 10px;
+  border-bottom: 1px solid #444;
+}
+
+.menu-items li:hover {
+  background-color: #555;
+}
+
+/* Exibir o menu quando o botão for clicado */
+.menu-open {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para telas maiores (desktop) */
+@media (min-width: 768px) {
+
+  .menu-header {
+    padding-bottom: 20px;
+  }
+
+  .menu-items li {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,158 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Attraction List */
+  .attraction-list {
+    margin-bottom: 20px;
+  }
+  
+  .attraction-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .attraction-list li {
+    margin-bottom: 10px;
+  }
+  
+  .attraction-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Attraction Details */
+  .attraction-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .people-count {
+    margin: 10px 0;
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* Visit List */
+  .visit-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .visit-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .remove-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Adaptabilidade para Dispositivos de Apontamento */
+  @media (hover: hover) and (pointer: fine) {
+    /* Estilos para dispositivos com mouse */
+    .attraction-button:hover,
+    .add-button:hover,
+    .remove-button:hover {
+      background-color: #ddd;
+      cursor: pointer;
+    }
+  }
+  
+  /* Responsividade */
+  @media (min-width: 768px) {
+    .main-content {
+      flex-direction: row;
+    }
+  
+    .attraction-list,
+    .attraction-details,
+    .visit-list {
+      flex: 1;
+      margin: 0 10px;
+    }
+  }
+  
+  /* Esquema de Cores Light e Dark */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  
+    .attraction-details {
+      border: 1px solid #333;
+    }
+  
+    .visit-list li {
+      border-bottom: 1px solid #333;
+    }
+  
+    /* Botões */
+    .attraction-button,
+    .add-button,
+    .remove-button {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #333;
+    }
+  
+    .attraction-button:hover,
+    .add-button:hover,
+    .remove-button:hover {
+      background-color: #333;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  
+    .attraction-details {
+      border: 1px solid #ccc;
+    }
+  
+    .visit-list li {
+      border-bottom: 1px solid #ccc;
+    }
+  
+    /* Botões */
+    .attraction-button,
+    .add-button,
+    .remove-button {
+      background-color: #f1f1f1;
+      color: #000000;
+      border: 1px solid #ccc;
+    }
+  
+    .attraction-button:hover,
+    .add-button:hover,
+    .remove-button:hover {
+      background-color: #ddd;
+    }
+  }
