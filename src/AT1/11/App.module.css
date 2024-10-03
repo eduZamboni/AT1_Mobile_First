@@ -1,0 +1,122 @@
+/* Global Menu */
+.globalMenu {
+  grid-area: globalMenu;
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+/* Botão do menu */
+.menuButton {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+/* Menu de opções */
+.menuOptions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Menu expandido */
+.open {
+  max-height: 200px; 
+  transition: max-height 0.3s ease-in;
+}
+
+/* Estilo do menu */
+.menuOptions li {
+  padding: 10px;
+  border-top: 1px solid #666;
+  text-align: center;
+  background-color: #555;
+}
+
+.menuOptions li:hover {
+  background-color: #666;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "globalMenu globalMenu header"
+    "contextMenu contextMenu contextMenu"
+    "mainContent mainContent mainContent"
+    "ads ads ads"
+    "footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.contextMenu {
+  grid-area: contextMenu;
+  background-color: #555;
+  color: white;
+  padding: 20px;
+}
+
+.mainContent {
+  grid-area: mainContent;
+  background-color: #666;
+  color: white;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.ads {
+  grid-area: ads;
+  background-color: #777;
+  color: white;
+  padding: 20px;
+  min-height: 100px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "globalMenu globalMenu ads"
+      "contextMenu mainContent ads"
+      "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .globalMenu {
+    grid-column: span 2;
+  }
+
+  .mainContent,
+  .contextMenu,
+  .ads {
+    min-height: 300px;
+  }
+}

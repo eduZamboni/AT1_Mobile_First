@@ -1,0 +1,67 @@
+/* Estilos Mobile-First */
+.container {
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table thead {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.2em;
+  }
+  
+  .tableRow:hover {
+    background-color: var(--row-hover-bg-color);
+  }
+  
+  /* Cursor pointer */
+  .tableRow {
+    cursor: pointer;
+  }
+  
+  /* Tema Claro */
+  :root {
+    --background-color: #fff;
+    --text-color: #000;
+    --header-bg-color: #f0f0f0;
+    --header-text-color: #000;
+    --border-color: #ccc;
+    --row-hover-bg-color: #e0e0e0;
+  }
+  
+  /* Tema Escuro */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #222;
+      --text-color: #fff;
+      --header-bg-color: #333;
+      --header-text-color: #fff;
+      --border-color: #555;
+      --row-hover-bg-color: #444;
+    }
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }

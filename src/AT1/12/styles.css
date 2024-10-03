@@ -1,0 +1,32 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilização por classes */
+  .container {
+    padding: 0 20px;
+  }
+  
+  .titulo-h2 {
+    font-size: clamp(24px, 5vw, 36px);
+    text-align: center;
+  }
+  
+  .titulo-h3 {
+    font-size: clamp(20px, 4vw, 32px);
+    text-align: center;
+  }
+  
+  .titulo-h4 {
+    font-size: clamp(18px, 3.5vw, 28px);
+    text-align: center;
+  }
+  
+  .paragrafo {
+    font-size: clamp(16px, 3vw, 24px);
+    text-align: justify;
+    text-indent: 2em;
+    padding: 0 20px;
+  }

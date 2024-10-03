@@ -1,24 +1,17 @@
-import Header from './components/Header';
-import VideoPlayer from './components/VideoPlayer';
-import VideoActions from './components/VideoActions';
-import VideoDescription from './components/VideoDescription';
-import Advertisement from './components/Advertisement';
-import RelatedVideos from './components/RelatedVideos';
-import Comments from './components/Comments';
-import './App.css';
+import Lista from './components/Lista';
 
-export default function App() {
+function App() {
+  const items = [
+    { name: 'Maçã', precoUnit: 2.5, quant: 4 },
+    { name: 'Pão', precoUnit: 1.2, quant: 6 },
+    { name: 'Leite', precoUnit: 3.0, quant: 2 },
+  ];
+
   return (
-    <div className="app-container">
-      <Header />
-      <main className="main-content">
-        <VideoPlayer />
-        <VideoActions />
-        <VideoDescription />
-        <Advertisement />
-        <RelatedVideos />
-        <Comments />
-      </main>
+    <div>
+      <Lista items={items} />
     </div>
   );
 }
+
+export default App;

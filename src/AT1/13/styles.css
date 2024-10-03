@@ -1,131 +1,110 @@
 /* Estilos Gerais */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .app-container {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  /* Categorias */
-  .category-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .category-list li {
-    margin-bottom: 10px;
-  }
-  
-  .category-list button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  /* Lista de Tarefas */
-  .todo-list input[type='text'] {
-    width: calc(100% - 100px);
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .todo-list button {
-    padding: 10px;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-  
-  .back-button {
-    background: none;
-    border: none;
-    color: #007bff;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  /* Lista */
-  .task-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .task-item {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Layout para Portrait */
+@media (orientation: portrait) {
+  .quiz-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* Layout para Landscape */
+@media (orientation: landscape) {
+  .app-container {
+    display: grid;
+    grid-template-areas:
+      "question question"
+      "options options"
+      "result result";
+    grid-gap: 20px;
+  }
+
+  .question-container {
+    grid-area: question;
+  }
+
+  .options-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .options-list li {
+    width: 45%;
     margin-bottom: 10px;
   }
-  
-  .task-item span {
-    flex: 1;
+
+  .option-button {
+    width: 100%;
   }
-  
-  .task-item.completed span {
-    text-decoration: line-through;
-    color: #888;
+
+  .result-container {
+    grid-area: result;
   }
-  
-  .task-item button {
-    margin-left: 5px;
+}
+
+/* Tema Light e Dark */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
   }
-  
-  /* Responsividade */
-  @media (min-width: 768px) {
-    .todo-list input[type='text'] {
-      width: calc(100% - 120px);
-    }
-  
-    .todo-list button {
-      width: 100px;
-    }
+
+  .option-button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
   }
-  
-  /* Esquema de Cores Light e Dark */
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #121212;
-      color: #ffffff;
-    }
-  
-    .category-list button,
-    .todo-list button {
-      background-color: #1e1e1e;
-      color: #ffffff;
-      border: 1px solid #333;
-    }
-  
-    .back-button {
-      color: #ffffff;
-    }
-  
-    .task-item.completed span {
-      color: #bbb;
-    }
+
+  .option-button:hover {
+    background-color: #333;
   }
-  
-  @media (prefers-color-scheme: light) {
-    body {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .category-list button,
-    .todo-list button {
-      background-color: #f1f1f1;
-      color: #000000;
-      border: 1px solid #ccc;
-    }
-  
-    .back-button {
-      color: #007bff;
-    }
-  
-    .task-item.completed span {
-      color: #888;
-    }
+
+  .result-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
   }
+
+  .result-container button:hover {
+    background-color: #333;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .option-button {
+    background-color: #f1f1f1;
+    color: #000000;
+    border: 1px solid #ccc;
+  }
+
+  .option-button:hover {
+    background-color: #ddd;
+  }
+
+  .result-container button {
+    background-color: #f1f1f1;
+    color: #000000;
+    border: 1px solid #ccc;
+  }
+
+  .result-container button:hover {
+    background-color: #ddd;
+  }
+}

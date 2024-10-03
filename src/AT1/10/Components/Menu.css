@@ -1,0 +1,88 @@
+/* menu */
+.menu-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* menu header */
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* icone do menu */
+  .menu-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* marca */
+  .brand {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* logo */
+  .logo {
+    font-size: 24px;
+  }
+  
+  /* Menu de opções */
+  .menu-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  /* Menu expandido */
+  .menu-options.open {
+    max-height: 500px; 
+    transition: max-height 0.3s ease-in;
+  }
+  
+  /* opções do menu */
+  .menu-options li {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .menu-options li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .menu-header {
+      justify-content: flex-start;
+    }
+  
+    .menu-icon {
+      display: none;
+    }
+  
+    /* Menu horizontal */
+    .menu-options {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      max-height: none; 
+    }
+  
+    /* Estilo para as opções */
+    .menu-options li {
+      padding: 10px 20px;
+      border: none;
+    }
+  }
